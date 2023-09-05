@@ -5,6 +5,16 @@ chmod +x Anaconda3-2020.11-Linux-x86_64.sh
 bash ./Anaconda3-2020.11-Linux-x86_64.sh
 source ~/.bashrc
 
+
+https://docs.conda.io/projects/miniconda/en/latest/
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+~/miniconda3/bin/conda init bash
+source ~/.bashrc
+
+
 # setup new conda env
 conda info -e
 conda create --name aim
@@ -17,7 +27,6 @@ conda install git
 connect to remote server
 select the env of aim
 install extention of "github copilot"
-install extention of "github pull requests and issues"
 
 # git
 mkdir aim
@@ -32,3 +41,7 @@ ssh-keygen -t rsa -b 4096 -C "qifeng200910@gmail.com"
 cat ~/.ssh/id_rsa.pub  # copy to github (setting) as ssh key.
 git push --set-upstream origin master
 
+# use sdxl to generate one pic given a text prompt.
+nvidia-smi # to check cudn version is 11.7
+conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia #https://pytorch.org/
+pip install transformers accelerate safetensors diffusers["torch"]
