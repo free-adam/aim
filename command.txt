@@ -1,0 +1,34 @@
+bash
+# install anaconda, not miniconda
+wget -c https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+chmod +x Anaconda3-2020.11-Linux-x86_64.sh
+bash ./Anaconda3-2020.11-Linux-x86_64.sh
+source ~/.bashrc
+
+# setup new conda env
+conda info -e
+conda create --name aim
+conda activate aim
+
+conda install pip
+conda install git
+
+# in vsc, setup dev env: 
+connect to remote server
+select the env of aim
+install extention of "github copilot"
+install extention of "github pull requests and issues"
+
+# git
+mkdir aim
+cd aim
+git init
+touch readme.md
+git add.
+git commit -m "kickoff"
+# build a new repository in Github web, named as "aim" 
+git remote add origin git@github.com:free-adam/aim.git # MUST use SSH, but url.
+ssh-keygen -t rsa -b 4096 -C "qifeng200910@gmail.com"
+cat ~/.ssh/id_rsa.pub  # copy to github (setting) as ssh key.
+git push --set-upstream origin master
+
