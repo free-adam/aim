@@ -45,3 +45,10 @@ git push --set-upstream origin master
 nvidia-smi # to check cudn version is 11.7
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia #https://pytorch.org/
 pip install transformers accelerate safetensors diffusers["torch"]
+
+pip install gdown
+pip install opencv-python
+pip install timm
+
+# modify the file of /data/home/lqf/aim/_3d_warping/AdaBins/infer.py
+pretrained_path = "/data/home/lqf/aim/_3d_warping/AdaBins/AdaBins_nyu.pt"

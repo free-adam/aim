@@ -1,0 +1,8 @@
+*.jpg
+*.png
+*.mp4
+*.pt
+_3d_warping/AdaBins/
+_3d_warping/disco-diffusion/
+_3d_warping/MiDaS/
+_3d_warping/pytorch3d-lite/
