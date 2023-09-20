@@ -1,6 +1,5 @@
-**/*.jpg
-**/*.png
-**/*.mp4
+results/*.jpg
+results/*.mp4
 **/*.pt
 _3d_warping/AdaBins/
 _3d_warping/disco-diffusion/
